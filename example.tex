@@ -1,0 +1,25 @@
+\section{Some Section}\label{sec:some-sec}
+Some text and \ac{SA} \cite{example-source}.
+
+%example listing
+\begin{listing}
+  \inputminted{c}{code/code.c}
+  \caption{hello world in C}
+  \label{lst:hello-world}
+\end{listing}
+
+%bullet points
+\begin{itemize}
+  \item Some Point
+  \item An other Point
+\end{itemize}
+
+%figure new geometry is only needed for graphics larger than margins so they get centered correctly
+\newgeometry{left=1cm,right=1cm}
+\begin{figure}
+  \includegraphics[scale=1]{graphics/example.jpg}
+  \centering{}
+  \caption{Example Pricture}
+  \label{fig:example-fig}
+\end{figure}
+\restoregeometry{}
