@@ -1,0 +1,71 @@
+\documentclass[a4paper,12pt]{article}
+\author{David Lorenz}
+\title{Davy's Latex Template}
+\date{14-01-2024}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[printonlyused,withpage]{acronym}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage[title]{appendix}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=none
+]{biblatex}
+\addbibresource{example.bib}
+
+%change the symbol of second level in listings to a circle
+\renewcommand{\labelitemii}{$\circ$}
+
+%new command to reference sections, which combines \autoref and \nameref
+\newcommand{\listingautorefname}{Listing}
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\subsubsectionautorefname}{Section}
+\newcommand{\secref}[1]{\autoref{#1} \nameref{#1}}
+
+%new command to create a paragraph with a line break after the title
+\newcommand{\paragraphb}[1]{\paragraph{#1}\mbox{}\\}
+
+%minted config with a grey background color
+\usepackage[outputdir=build]{minted}
+\usemintedstyle{solarized-light}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\setminted{
+  linenos=true,
+  autogobble,
+  tabsize=4,
+  breaklines,
+  bgcolor=bg,
+  fontsize=\small
+}
+%commands to inline code in different languages and same bg color
+\newcommand{\inlinec}[1]{\mintinline[bgcolor=bg]{c}{#1}}
+\newcommand{\inlinebash}[1]{\mintinline[bgcolor=bg]{bash}{#1}}
+\newcommand{\inlinetext}[1]{\mintinline[bgcolor=bg]{text}{#1}}
+\newcommand{\inlinepy}[1]{\mintinline[bgcolor=b{python}{#1}}
+\newenvironment{code}{\captionsetup{type=listing}}{}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\newpage
+\tableofcontents
+\newpage
+
+\include{example.tex}
+
+\section*{List of Acronyms}
+\begin{acronym}
+  \acro{SA}{Some Acronym}
+\end{acronym}
+
+\printbibliography
+\end{document}
