@@ -19,6 +19,8 @@
   style=numeric,
   sorting=none
 ]{biblatex}
+
+%bib file
 \addbibresource{example.bib}
 
 %change the symbol of second level in listings to a circle
@@ -51,6 +53,8 @@
 \newcommand{\inlinebash}[1]{\mintinline[bgcolor=bg]{bash}{#1}}
 \newcommand{\inlinetext}[1]{\mintinline[bgcolor=bg]{text}{#1}}
 \newcommand{\inlinepy}[1]{\mintinline[bgcolor=b{python}{#1}}
+
+%environment for code that uses more than one page
 \newenvironment{code}{\captionsetup{type=listing}}{}
 
 \begin{document}
@@ -68,4 +72,8 @@
 \end{acronym}
 
 \printbibliography
+
+\begin{appendices}
+\section{Example Appendix}\label{append:example}
+\end{appendices}
 \end{document}
