@@ -1,0 +1,1 @@
+Thanks to the Computational Applied Mathematics & Operations Reasearch group from Rice University for supplying the latex-math-symbols.pdf cheatsheet.
