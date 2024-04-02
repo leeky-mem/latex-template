@@ -54,6 +54,11 @@
 %environment for code that uses more than one page
 \newenvironment{code}{\captionsetup{type=listing}}{}
 
+%make \par not indented and with a little skip to the above line
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{.5em}
+\setlength{\skip\footins}{2em}
+
 \begin{document}
 \maketitle
 \thispagestyle{empty}
