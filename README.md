@@ -3,10 +3,11 @@ My Latex template. It is tailord to my needs, but feel free to use it.
 This template is provided without any guarantees.
 
 # Prerequisites
-## OS
-Tested on arch linux. It should work on other linux distributions and on MacOS. Maybe on Windows but I wouldn't know about that.
+## Platform
+Tested on Arch Linux. It should work on other Linux distributions and on MacOS although the needed packages may have slightly different names on these platforms.\
+Prbably won't work on Windows, I don't know.
 
-## packages
+## Packages
 I have the following packages installed. Probably not all of them are needed for this template: \
 LaTeX packages:
 - texlive-basic
@@ -36,7 +37,7 @@ Build:
 
 # Build
 - Use the `makefile` to build the template.
-- Open a terminal and navigate to the `latex-template` directory and type `make`
+- Open a terminal and navigate to the `latex-template` directory and use `make` to build.
 ```bash
 make
 ```
